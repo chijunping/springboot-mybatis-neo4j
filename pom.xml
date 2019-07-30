@@ -8,6 +8,7 @@
     <artifactId>springboot-neo4j-mybatis</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <name>springboot-neo4j-mybatis</name>
     <dependencies>
         <!--spring boot-->
         <dependency>
@@ -58,10 +59,22 @@
 
 
     <build>
+        <finalName>springboot-neo4j-mybatis</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <fork>true</fork>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
             </plugin>
         </plugins>
     </build>
