@@ -25,3 +25,6 @@ target/
 #.gitignore
 ConfigCenter_*
 rebel.xml
+.gitignore
+.idea/.name
+.idea/workspace.xml
